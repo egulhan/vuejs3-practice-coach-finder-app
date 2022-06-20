@@ -30,29 +30,12 @@ import CoachListItem from "@/components/coach/CoachListItem";
 export default {
   components: {CoachListItem},
   data() {
-    return {
-      coaches: [
-        {
-          id: 'c1',
-          name: 'Manuel Lorenz',
-          price: 39,
-          features: [
-            'frontend',
-            'career'
-          ],
-        },
-        {
-          id: 'c2',
-          name: 'Erman Gulhan',
-          price: 39,
-          features: [
-            'frontend',
-            'backend',
-            'career'
-          ],
-        },
-      ],
-    };
+    return {};
+  },
+  computed: {
+    coaches() {
+      return this.$store.getters['coach/coaches']();
+    },
   },
 }
 </script>

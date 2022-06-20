@@ -4,6 +4,7 @@ import {createRouter, createWebHashHistory} from "vue-router";
 import CoachList from "@/pages/CoachList";
 import RequestList from "@/pages/RequestList";
 import ContactCoach from "@/pages/ContactCoach";
+import store from './store';
 
 const routes = [
     {path: '/', name: 'home', component: CoachList},
@@ -20,5 +21,6 @@ const router = createRouter({
 const app = createApp(App);
 
 app.use(router);
+app.use(store);
 
 app.mount('#app');
