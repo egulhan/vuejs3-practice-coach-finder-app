@@ -11,6 +11,7 @@ export default {
         }
 
         coachRequests.push({
+            id: Date.now(),
             email,
             message,
         });

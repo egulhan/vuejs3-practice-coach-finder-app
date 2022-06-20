@@ -1,5 +1,12 @@
 export default {
     requests(state) {
-        return state.requests;
+        const reqs = Object.values(state.requests);
+        let newReqs = [];
+
+        reqs.forEach(item => {
+            newReqs = newReqs.concat(item)
+        });
+
+        return newReqs;
     },
 };

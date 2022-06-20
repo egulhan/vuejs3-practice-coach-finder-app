@@ -1,6 +1,6 @@
 <template>
   <div class="request-item box-square">
-    <p><a href="mailto:aaa@aaa.com">{{ email }}</a></p>
+    <p><a :href="`mailto:${email}`">{{ email }}</a></p>
     <p>{{ message }}</p>
   </div>
 </template>
