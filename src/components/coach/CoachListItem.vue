@@ -10,7 +10,7 @@
 
     <div class="btn-group">
       <button @click="$router.push({name:'contact', params:{id}})">Contact</button>
-      <button class="purple-d">View Details</button>
+      <button class="purple-d" @click="$router.push({name:'coach-details',params:{id}})">View Details</button>
     </div>
   </div>
 </template>

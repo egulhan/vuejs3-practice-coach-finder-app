@@ -3,11 +3,14 @@
     <div class="box">
       <h3 class="title">Requests</h3>
 
-      <request-item
-          v-for="request in requests" :key="request.id"
-          :id="request.id" :email="request.email"
-          :message="request.message">
-      </request-item>
+      <div v-if="requests.length>0">
+        <request-item
+            v-for="request in requests" :key="request.id"
+            :id="request.id" :email="request.email"
+            :message="request.message">
+        </request-item>
+      </div>
+      <p v-else class="no-requests">The coach does not have any request.</p>
     </div>
   </div>
 </template>
@@ -17,9 +20,11 @@ import RequestItem from "@/components/request/RequestItem";
 
 export default {
   components: {RequestItem},
+  props: ['id'],
   computed: {
     requests() {
-      return this.$store.getters['request/requests'];
+      const id = this?.id ?? null;
+      return this.$store.getters['request/requests'](id);
     },
   },
 }
@@ -27,6 +32,9 @@ export default {
 
 <style lang="scss" scoped>
 #request-list-page {
-
+  .no-requests {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
 }
 </style>
