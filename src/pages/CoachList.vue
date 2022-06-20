@@ -27,6 +27,8 @@
     <div id="coach-list" class="box">
       <button @click="refresh">Refresh</button>
 
+      <the-loading :is-loading="loading"></the-loading>
+
       <coach-list-item
           v-for="coach in coaches" :id="coach.id" :name="coach.name"
           :price="coach.price"
@@ -38,11 +40,13 @@
 
 <script>
 import CoachListItem from "@/components/coach/CoachListItem";
+import TheLoading from "@/components/ui/TheLoading";
 
 export default {
-  components: {CoachListItem},
+  components: {CoachListItem, TheLoading},
   data() {
     return {
+      loading: false,
       coaches: [],
       filters: {
         frontend: false,
@@ -54,7 +58,14 @@ export default {
   },
   methods: {
     getCoaches(features = []) {
-      this.coaches = this.$store.getters['coach/coaches'](features);
+      this.loading = true;
+      this.coaches = [];
+
+      // demonstrate the loading functionality
+      setTimeout(() => {
+        this.coaches = this.$store.getters['coach/coaches'](features);
+        this.loading = false;
+      }, 1000);
     },
     refresh() {
       const features = [];
@@ -65,7 +76,8 @@ export default {
         }
       }
 
-      this.coaches = this.$store.getters['coach/coaches'](features);
+      // this.coaches = this.$store.getters['coach/coaches'](features);
+      this.getCoaches(features);
     }
   },
   created() {
