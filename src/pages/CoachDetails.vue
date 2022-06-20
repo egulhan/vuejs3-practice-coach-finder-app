@@ -6,11 +6,7 @@
     </div>
 
     <div class="box">
-      <ul class="label-group">
-        <li v-for="(feature,index) in coach.features" :key="feature" :class="labelClasses[index]">
-          {{ feature }}
-        </li>
-      </ul>
+      <coach-features :features="coach.features"></coach-features>
     </div>
 
     <request-list :id="$route.params.id"></request-list>
@@ -19,18 +15,14 @@
 
 <script>
 import RequestList from "@/pages/RequestList";
+import CoachFeatures from "@/components/coach/CoachFeatures";
 
 export default {
   name: "CoachDetails",
-  components: {RequestList},
+  components: {CoachFeatures, RequestList},
   data() {
     return {
       coach: null,
-      labelClasses: [
-        'purple-d',
-        'purple',
-        'purple-l',
-      ],
     };
   },
   methods: {

@@ -24,18 +24,16 @@
     </div>
 
     <div class="box">
-      <ul class="label-group">
-        <li v-for="(feature,index) in coach.features" :key="feature" :class="labelClasses[index]">
-          {{ feature }}
-        </li>
-      </ul>
+      <coach-features :features="coach.features"></coach-features>
     </div>
   </div>
 </template>
 
 <script>
+import CoachFeatures from "@/components/coach/CoachFeatures";
 export default {
   name: "ContactCoach",
+  components: {CoachFeatures},
   data() {
     return {
       coach: null,

@@ -2,11 +2,8 @@
   <div class="coach-list-item">
     <h3>{{ name }}</h3>
     <strong>${{ price }}/hour</strong>
-    <ul class="label-group">
-      <li v-for="(feature,index) in features" :key="feature" :class="labelClasses[index]">
-        {{ feature }}
-      </li>
-    </ul>
+
+    <coach-features :features="features"></coach-features>
 
     <div class="btn-group">
       <button @click="$router.push({name:'contact', params:{id}})">Contact</button>
@@ -16,8 +13,11 @@
 </template>
 
 <script>
+import CoachFeatures from "@/components/coach/CoachFeatures";
+
 export default {
   name: "CoachListItem",
+  components: {CoachFeatures},
   props: ['id', 'name', 'price', 'features'],
   data() {
     return {
