@@ -2,15 +2,21 @@ export default {
     coaches: (state) => (features) => {
         const coaches = Object.values(state.coaches);
 
-        if (!features) {
+        if (!features || features?.length === 0) {
             return coaches;
         }
 
-        const sortedFeatures = features.sort().join(',').toLowerCase();
-
         return coaches.filter((coach) => {
-            const coachFeatures = coach.features.sort().join(',').toLowerCase();
-            return sortedFeatures === coachFeatures;
+            let isFound = false;
+            features.forEach(item => {
+                isFound = coach.features.includes(item);
+
+                if (isFound) {
+                    return false;
+                }
+            });
+
+            return isFound;
         })
     },
     coach: (state) => (id) => {
