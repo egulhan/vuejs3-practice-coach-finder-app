@@ -57,8 +57,6 @@ export default {
       this.coaches = this.$store.getters['coach/coaches'](features);
     },
     refresh() {
-      console.log('filters', this.filters);
-
       const features = [];
 
       for (const key in this.filters) {

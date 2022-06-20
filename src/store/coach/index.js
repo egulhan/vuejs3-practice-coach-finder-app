@@ -45,7 +45,7 @@ export default {
                 },
                 c5: {
                     id: 'c5',
-                    name: 'Halil',
+                    name: 'Ahmet',
                     price: 75,
                     features: [
                         'backend',
