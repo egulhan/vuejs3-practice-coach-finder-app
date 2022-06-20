@@ -5,7 +5,7 @@
     </h2>
     <ul>
       <li>
-        <router-link :class="{'router-link-active': $route.name==='home'}" :to="{name: 'coaches'}">All Coaches</router-link>
+        <router-link class="active" :to="{name: 'coaches'}">All Coaches</router-link>
       </li>
       <li>
         <router-link :to="{name: 'requests'}">Requests</router-link>

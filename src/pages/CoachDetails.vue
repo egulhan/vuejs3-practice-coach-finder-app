@@ -30,8 +30,7 @@ export default {
       const coach = this.$store.getters['coach/coach'](route.params.id);
 
       if (!coach) {
-        this.$router.push({name: 'not-found'});
-        return;
+        return this.$router.push({name: 'coaches'});
       }
 
       this.coach = coach;
