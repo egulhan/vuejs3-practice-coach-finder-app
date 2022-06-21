@@ -1,6 +1,6 @@
 export default {
     register(state, payload) {
-        const id = Date.now();
+        const id = payload.id;
 
         state.coaches[id] = {
             id,

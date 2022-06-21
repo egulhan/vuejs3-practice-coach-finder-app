@@ -33,7 +33,7 @@
 
         <div class="input-group" :class="{invalid: !form.areas.isValid}">
           <input type="checkbox" id="cb-career" value="career" @change="onAreasChange">
-          <label for="cb-career">Career</label>
+          <label for="cb-career">Career Advisory</label>
         </div>
 
         <p v-if="!form.areas.isValid" class="error-message">{{ form.areas.errMsg }}</p>
@@ -51,6 +51,7 @@
 <script>
 export default {
   name: "CoachRegistrationForm",
+  emits: ['register-coach'],
   data() {
     return {
       isFormValid: true,
@@ -88,9 +89,7 @@ export default {
         areas: this.form.areas.val,
       };
 
-      this.$store.dispatch('coach/register', formData);
-
-      this.$router.replace({name: 'coaches'});
+      this.$emit('register-coach', formData);
     },
     clearValidity() {
       this.isFormValid = true;
@@ -129,8 +128,6 @@ export default {
       } else {
         this.form.areas.val = this.form.areas.val.filter(item => item !== area);
       }
-
-      console.log('this.form.areas', this.form.areas.val);
     }
   }
 }
