@@ -1,10 +1,5 @@
 <template>
   <div id="contact-coach-page" class="page">
-    <div class="box">
-      <h3>{{ coach.name }}</h3>
-      <h4>${{ coach.price }}/hour</h4>
-    </div>
-
     <div class="form-container box">
       <h3>Interested? Reach out now!</h3>
 
@@ -22,18 +17,12 @@
         </div>
       </form>
     </div>
-
-    <div class="box">
-      <coach-areas :areas="coach.areas"></coach-areas>
-    </div>
   </div>
 </template>
 
 <script>
-import CoachAreas from "@/components/coach/CoachAreas";
 export default {
   name: "ContactCoach",
-  components: {CoachAreas},
   data() {
     return {
       coach: null,

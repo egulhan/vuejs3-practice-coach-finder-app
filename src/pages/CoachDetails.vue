@@ -5,6 +5,8 @@
       <h4>${{ coach.price }}/hour</h4>
     </div>
 
+    <router-view></router-view>
+
     <div class="box">
       <coach-areas :areas="coach.areas"></coach-areas>
     </div>
