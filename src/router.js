@@ -4,6 +4,7 @@ import ContactCoach from "@/pages/ContactCoach";
 import CoachDetails from "@/pages/CoachDetails";
 import NotFound from "@/pages/NotFound";
 import {createRouter, createWebHistory} from "vue-router";
+import CoachRegistration from "@/pages/CoachRegistration";
 
 const routes = [
     {path: '/', name: 'home', redirect: '/coaches'},
@@ -17,6 +18,7 @@ const routes = [
         ]
     },
     {path: '/requests', name: 'requests', component: RequestList},
+    {path: '/register', name: 'register', component: CoachRegistration},
     {path: '/:pathMatch(.*)*', name: 'not-found', component: NotFound},
 ];
 

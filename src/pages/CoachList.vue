@@ -25,7 +25,10 @@
     </base-card>
 
     <base-card id="coach-list">
-      <button @click="refresh">Refresh</button>
+      <section class="action-buttons">
+        <button @click="refresh">Refresh</button>
+        <button @click="$router.push({name:'register'})" class="purple-d">Register as a Coach</button>
+      </section>
 
       <the-loading :is-loading="loading"></the-loading>
 
@@ -78,6 +81,9 @@ export default {
 
       // this.coaches = this.$store.getters['coach/coaches'](areas);
       this.getCoaches(areas);
+    },
+    register(){
+
     }
   },
   created() {
