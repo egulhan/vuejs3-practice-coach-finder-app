@@ -1,27 +1,21 @@
 <template>
-  <ul class="label-group">
-    <li v-for="(area,index) in areas" :key="area" :class="labelClasses[index]">
-      {{ area }}
-    </li>
-  </ul>
+  <section>
+    <base-badge v-for="area in areas" :key="area" :name="area" :type="area"></base-badge>
+  </section>
 </template>
 
 <script>
+import BaseBadge from "@/components/ui/BaseBadge";
+
 export default {
   name: "CoachAreas",
+  components: {BaseBadge},
   props: ['areas'],
-  data() {
-    return {
-      labelClasses: [
-        'purple-d',
-        'purple',
-        'purple-l',
-      ],
-    };
-  }
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+section {
+  margin: 1rem 0;
+}
 </style>

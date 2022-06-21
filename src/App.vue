@@ -87,41 +87,6 @@ button {
   }
 }
 
-ul.label-group {
-  list-style-type: none;
-  margin: 1rem 0;
-
-  li {
-    display: inline;
-    border-radius: 20px;
-    padding: 0.5rem 1rem;
-    color: white;
-    font-size: 0.9rem;
-    background: grey;
-    text-transform: uppercase;
-
-    &.purple {
-      background: purple;
-    }
-
-    &.purple-d {
-      background: #380c87;
-    }
-
-    &.purple-l {
-      background: #8d1266;
-    }
-
-    &.blue {
-      background: blue;
-    }
-  }
-
-  li:not(:last-child) {
-    margin-right: 0.5rem;
-  }
-}
-
 .clearfix::after {
   content: "";
   clear: both;
