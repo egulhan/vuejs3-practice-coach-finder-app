@@ -87,19 +87,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#coach-list-page {
-  #filter-form {
-    h3 {
-      font-size: 1.2rem;
-    }
-
-    .cb-group {
-      margin-top: 1rem;
-
-      span {
-        margin-right: 0.8rem;
-      }
-    }
-  }
-}
+@import '@/assets/css/scss/coach/contact-list-page.scss';
 </style>

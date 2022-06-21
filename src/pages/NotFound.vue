@@ -6,6 +6,7 @@
 </template>
 
 <script>
+
 export default {
   name: "NotFound",
   components: {}
@@ -14,10 +15,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.page {
-  >p {
-    margin-top: 1.5rem;
-    text-align: center;
-  }
-}
+@import '@/assets/css/scss/ui/not-found-page.scss';
 </style>

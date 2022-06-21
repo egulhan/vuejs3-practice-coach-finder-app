@@ -21,39 +21,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-header {
-  padding: 1rem;
-  background: #380c87;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  a.home {
-    color: white;
-    text-decoration: none;
-  }
-
-  ul {
-    list-style-type: none;
-
-    li {
-      display: inline;
-
-      :last-child {
-        margin-left: 0.5rem;
-      }
-
-      a:not(.home) {
-        color: pink;
-        padding: 0.5rem 0.8rem;
-        text-decoration: none;
-        font-size: 1.1rem;
-
-        &.router-link-active:not(.home) {
-          border: 1px solid pink;
-        }
-      }
-    }
-  }
-}
+@import "@/assets/css/scss/ui/the-header.scss";
 </style>

@@ -32,10 +32,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.coach-list-item {
-  border-radius: 25px;
-  padding: 1rem;
-  margin: 1rem 0;
-  border: 1px solid black;
-}
+@import "@/assets/css/scss/coach/coach-list-item.scss";
 </style>

@@ -31,10 +31,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#request-list-page {
-  .no-requests {
-    text-align: center;
-    margin-top: 1.5rem;
-  }
-}
+@import "@/assets/css/scss/request/request-list-page.scss";
 </style>

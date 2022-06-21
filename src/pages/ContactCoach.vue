@@ -69,11 +69,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#contact-coach-page {
-  .form-container {
-    > h3 {
-      margin-bottom: 1rem;
-    }
-  }
-}
+@import '@/assets/css/scss/coach/contact-coach-page.scss';
 </style>

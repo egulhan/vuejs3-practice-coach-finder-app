@@ -13,15 +13,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.request-item {
-  > p {
-    margin-bottom: 0.5rem;
-
-    > a {
-      color: purple;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  }
-}
+@import "@/assets/css/scss/request/request-item.scss";
 </style>

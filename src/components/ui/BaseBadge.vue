@@ -24,28 +24,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-span {
-  border-radius: 20px;
-  padding: 0.5rem 1rem;
-  color: white;
-  font-size: 0.9rem;
-  background: grey;
-  margin-right: 0.5rem;
-
-  &.backend {
-    background: purple;
-  }
-
-  &.frontend {
-    background: #380c87;
-  }
-
-  &.career {
-    background: #8d1266;
-  }
-
-  &.devops {
-    background: blue;
-  }
-}
+@import "@/assets/css/scss/ui/base-badge.scss";
 </style>

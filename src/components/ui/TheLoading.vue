@@ -12,12 +12,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.loading-container {
-  text-align: center;
-
-  img {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-}
+@import "@/assets/css/scss/ui/the-loading.scss";
 </style>

@@ -11,12 +11,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-section {
-  border-radius: 25px;
-  -webkit-box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.4);
-  padding: 1rem;
-  margin: 1rem 0;
-}
+@import "@/assets/css/scss/ui/base-card.scss";
 </style>
