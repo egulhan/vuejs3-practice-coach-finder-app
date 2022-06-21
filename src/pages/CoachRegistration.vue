@@ -13,8 +13,6 @@ export default {
   methods: {
     registerCoach(data) {
       this.$store.dispatch('coach/register', data);
-      setTimeout(()=>
-          console.log('authUserId',this.$store.getters['authUserId']),2000);
       this.$router.replace({name: 'coaches'});
     }
   },

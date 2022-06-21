@@ -27,7 +27,11 @@
     <base-card id="coach-list">
       <section class="action-buttons">
         <button @click="refresh">Refresh</button>
-        <button @click="$router.push({name:'register'})" class="purple-d">Register as a Coach</button>
+        <button
+            v-if="showRegisterButton"
+            @click="$router.push({name:'register'})"
+            class="purple-d">Register as a Coach
+        </button>
       </section>
 
       <the-loading :is-loading="loading"></the-loading>
@@ -59,6 +63,11 @@ export default {
       },
     };
   },
+  computed: {
+    showRegisterButton() {
+      return this.$store.getters['authUserId'] === null;
+    }
+  },
   methods: {
     getCoaches(areas = []) {
       this.loading = true;
@@ -82,9 +91,6 @@ export default {
       // this.coaches = this.$store.getters['coach/coaches'](areas);
       this.getCoaches(areas);
     },
-    register(){
-
-    }
   },
   created() {
     this.getCoaches();
