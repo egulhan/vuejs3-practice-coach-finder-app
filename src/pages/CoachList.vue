@@ -1,6 +1,6 @@
 <template>
   <div id="coach-list-page">
-    <div id="filter-form" class="box">
+    <base-card id="filter-form">
       <h3>Find Your Coach</h3>
       <div class="cb-group">
         <span class="cb">
@@ -22,9 +22,9 @@
           <label for="cb-career">Career</label>
         </span>
       </div>
-    </div>
+    </base-card>
 
-    <div id="coach-list" class="box">
+    <base-card id="coach-list">
       <button @click="refresh">Refresh</button>
 
       <the-loading :is-loading="loading"></the-loading>
@@ -34,16 +34,17 @@
           :price="coach.price"
           :areas="coach.areas" :key="coach.id">
       </coach-list-item>
-    </div>
+    </base-card>
   </div>
 </template>
 
 <script>
 import CoachListItem from "@/components/coach/CoachListItem";
 import TheLoading from "@/components/ui/TheLoading";
+import BaseCard from "@/components/ui/BaseCard";
 
 export default {
-  components: {CoachListItem, TheLoading},
+  components: {BaseCard, CoachListItem, TheLoading},
   data() {
     return {
       loading: false,

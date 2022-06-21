@@ -1,6 +1,6 @@
 <template>
   <div id="request-list-page" class="page">
-    <div class="box">
+    <base-card>
       <h3 class="title">Requests</h3>
 
       <div v-if="requests.length>0">
@@ -11,15 +11,16 @@
         </request-item>
       </div>
       <p v-else class="no-requests">The coach does not have any request.</p>
-    </div>
+    </base-card>
   </div>
 </template>
 
 <script>
 import RequestItem from "@/components/request/RequestItem";
+import BaseCard from "@/components/ui/BaseCard";
 
 export default {
-  components: {RequestItem},
+  components: {BaseCard, RequestItem},
   props: ['id'],
   computed: {
     requests() {

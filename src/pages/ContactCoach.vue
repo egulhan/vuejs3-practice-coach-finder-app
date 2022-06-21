@@ -1,6 +1,6 @@
 <template>
   <div id="contact-coach-page" class="page">
-    <div class="form-container box">
+    <base-card class="form-container">
       <h3>Interested? Reach out now!</h3>
 
       <form @submit.prevent="sendMessage">
@@ -16,13 +16,16 @@
           <button type="submit" class="purple-d">Send Message</button>
         </div>
       </form>
-    </div>
+    </base-card>
   </div>
 </template>
 
 <script>
+import BaseCard from "@/components/ui/BaseCard";
+
 export default {
   name: "ContactCoach",
+  components: {BaseCard},
   data() {
     return {
       coach: null,

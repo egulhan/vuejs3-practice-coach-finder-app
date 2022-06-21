@@ -1,13 +1,15 @@
 <template>
-  <div class="page box">
+  <base-card class="page">
     <h3 class="title">Page Not Found</h3>
     <p>Sorry, the page you're looking for is not found.</p>
-  </div>
+  </base-card>
 </template>
 
 <script>
 export default {
-  name: "NotFound"
+  name: "NotFound",
+  components: {}
+
 }
 </script>
 

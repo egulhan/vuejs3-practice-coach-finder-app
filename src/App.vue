@@ -42,15 +42,6 @@ main {
 }
 
 /* common */
-.box {
-  border-radius: 25px;
-  -webkit-box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.4);
-  padding: 1rem;
-  margin: 1rem 0;
-}
-
 .box-square {
   border:1px solid grey;
   padding: 1rem;

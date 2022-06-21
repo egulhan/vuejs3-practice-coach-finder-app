@@ -1,15 +1,15 @@
 <template>
   <div id="coach-details-page" class="page">
-    <div class="box">
+    <base-card>
       <h3>{{ coach.name }}</h3>
       <h4>${{ coach.price }}/hour</h4>
-    </div>
+    </base-card>
 
     <router-view></router-view>
 
-    <div class="box">
+    <base-card>
       <coach-areas :areas="coach.areas"></coach-areas>
-    </div>
+    </base-card>
 
     <request-list :id="$route.params.id"></request-list>
   </div>
@@ -18,10 +18,11 @@
 <script>
 import RequestList from "@/pages/RequestList";
 import CoachAreas from "@/components/coach/CoachAreas";
+import BaseCard from "@/components/ui/BaseCard";
 
 export default {
   name: "CoachDetails",
-  components: {CoachAreas, RequestList},
+  components: {BaseCard, CoachAreas, RequestList},
   data() {
     return {
       coach: null,
