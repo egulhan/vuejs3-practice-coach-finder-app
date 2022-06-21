@@ -3,7 +3,7 @@
     <h3>{{ name }}</h3>
     <strong>${{ price }}/hour</strong>
 
-    <coach-features :features="features"></coach-features>
+    <coach-areas :areas="areas"></coach-areas>
 
     <div class="btn-group">
       <button @click="$router.push({name:'contact', params:{id}})">Contact</button>
@@ -13,12 +13,12 @@
 </template>
 
 <script>
-import CoachFeatures from "@/components/coach/CoachFeatures";
+import CoachAreas from "@/components/coach/CoachAreas";
 
 export default {
   name: "CoachListItem",
-  components: {CoachFeatures},
-  props: ['id', 'name', 'price', 'features'],
+  components: {CoachAreas},
+  props: ['id', 'name', 'price', 'areas'],
   data() {
     return {
       labelClasses: [

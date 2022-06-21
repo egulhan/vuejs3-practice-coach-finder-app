@@ -6,7 +6,7 @@
     </div>
 
     <div class="box">
-      <coach-features :features="coach.features"></coach-features>
+      <coach-areas :areas="coach.areas"></coach-areas>
     </div>
 
     <request-list :id="$route.params.id"></request-list>
@@ -15,11 +15,11 @@
 
 <script>
 import RequestList from "@/pages/RequestList";
-import CoachFeatures from "@/components/coach/CoachFeatures";
+import CoachAreas from "@/components/coach/CoachAreas";
 
 export default {
   name: "CoachDetails",
-  components: {CoachFeatures, RequestList},
+  components: {CoachAreas, RequestList},
   data() {
     return {
       coach: null,

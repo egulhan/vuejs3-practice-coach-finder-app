@@ -24,16 +24,16 @@
     </div>
 
     <div class="box">
-      <coach-features :features="coach.features"></coach-features>
+      <coach-areas :areas="coach.areas"></coach-areas>
     </div>
   </div>
 </template>
 
 <script>
-import CoachFeatures from "@/components/coach/CoachFeatures";
+import CoachAreas from "@/components/coach/CoachAreas";
 export default {
   name: "ContactCoach",
-  components: {CoachFeatures},
+  components: {CoachAreas},
   data() {
     return {
       coach: null,

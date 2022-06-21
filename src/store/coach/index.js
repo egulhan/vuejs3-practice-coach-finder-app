@@ -11,7 +11,7 @@ export default {
                     id: 'c1',
                     name: 'Erman',
                     price: 100,
-                    features: [
+                    areas: [
                         'frontend',
                         'backend',
                         'career',
@@ -21,7 +21,7 @@ export default {
                     id: 'c2',
                     name: 'Recep',
                     price: 100,
-                    features: [
+                    areas: [
                         'frontend',
                         'devops',
                     ],
@@ -30,7 +30,7 @@ export default {
                     id: 'c3',
                     name: 'Uğur',
                     price: 100,
-                    features: [
+                    areas: [
                         'backend',
                         'devops'
                     ],
@@ -39,7 +39,7 @@ export default {
                     id: 'c4',
                     name: 'Ali',
                     price: 50,
-                    features: [
+                    areas: [
                         'frontend',
                     ],
                 },
@@ -47,7 +47,7 @@ export default {
                     id: 'c5',
                     name: 'Ahmet',
                     price: 75,
-                    features: [
+                    areas: [
                         'backend',
                     ],
                 },

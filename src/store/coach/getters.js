@@ -1,15 +1,15 @@
 export default {
-    coaches: (state) => (features) => {
+    coaches: (state) => (areas) => {
         const coaches = Object.values(state.coaches);
 
-        if (!features || features?.length === 0) {
+        if (!areas || areas?.length === 0) {
             return coaches;
         }
 
         return coaches.filter((coach) => {
             let isFound = false;
-            features.forEach(item => {
-                isFound = coach.features.includes(item);
+            areas.forEach(item => {
+                isFound = coach.areas.includes(item);
 
                 if (isFound) {
                     return false;

@@ -32,7 +32,7 @@
       <coach-list-item
           v-for="coach in coaches" :id="coach.id" :name="coach.name"
           :price="coach.price"
-          :features="coach.features" :key="coach.id">
+          :areas="coach.areas" :key="coach.id">
       </coach-list-item>
     </div>
   </div>
@@ -57,27 +57,27 @@ export default {
     };
   },
   methods: {
-    getCoaches(features = []) {
+    getCoaches(areas = []) {
       this.loading = true;
       this.coaches = [];
 
       // demonstrate the loading functionality
       setTimeout(() => {
-        this.coaches = this.$store.getters['coach/coaches'](features);
+        this.coaches = this.$store.getters['coach/coaches'](areas);
         this.loading = false;
       }, 1000);
     },
     refresh() {
-      const features = [];
+      const areas = [];
 
       for (const key in this.filters) {
         if (this.filters[key]) {
-          features.push(key);
+          areas.push(key);
         }
       }
 
-      // this.coaches = this.$store.getters['coach/coaches'](features);
-      this.getCoaches(features);
+      // this.coaches = this.$store.getters['coach/coaches'](areas);
+      this.getCoaches(areas);
     }
   },
   created() {

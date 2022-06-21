@@ -1,15 +1,15 @@
 <template>
   <ul class="label-group">
-    <li v-for="(feature,index) in features" :key="feature" :class="labelClasses[index]">
-      {{ feature }}
+    <li v-for="(area,index) in areas" :key="area" :class="labelClasses[index]">
+      {{ area }}
     </li>
   </ul>
 </template>
 
 <script>
 export default {
-  name: "CoachFeatures",
-  props: ['features'],
+  name: "CoachAreas",
+  props: ['areas'],
   data() {
     return {
       labelClasses: [
