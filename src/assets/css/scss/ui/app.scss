@@ -76,30 +76,37 @@ button {
       border:1px solid red;
     }
 
-    label {
-      /*color: red;*/
-    }
-
     .error-message {
       font-size: 0.9rem;
       color: red;
     }
   }
 
-  label {
+  label + input:not([type=checkbox]) {
     display: block;
   }
 
-  input, textarea{
+  input[type=checkbox] {
+    margin-right: 0.5rem;
+  }
+
+  input:not([type=checkbox]), textarea{
     width: 100%;
   }
 
-  input {
+  input:not([type=checkbox]) {
     height: 2rem;
   }
 
   textarea {
     height: 5rem;
+  }
+}
+
+.cb-group {
+  .error-message {
+    font-size: 0.9rem;
+    color: red;
   }
 }
 

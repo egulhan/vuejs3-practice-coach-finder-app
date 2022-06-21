@@ -1,7 +1,7 @@
 <template>
   <div class="coach-list-item">
     <h3>{{ name }}</h3>
-    <strong>${{ price }}/hour</strong>
+    <strong>${{ rate }}/hour</strong>
 
     <coach-areas :areas="areas"></coach-areas>
 
@@ -18,16 +18,7 @@ import CoachAreas from "@/components/coach/CoachAreas";
 export default {
   name: "CoachListItem",
   components: {CoachAreas},
-  props: ['id', 'name', 'price', 'areas'],
-  data() {
-    return {
-      labelClasses: [
-        'purple-d',
-        'purple',
-        'purple-l',
-      ],
-    };
-  },
+  props: ['id', 'name', 'rate', 'areas'],
 }
 </script>
 

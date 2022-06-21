@@ -34,7 +34,7 @@
 
       <coach-list-item
           v-for="coach in coaches" :id="coach.id" :name="coach.name"
-          :price="coach.price"
+          :rate="coach.rate"
           :areas="coach.areas" :key="coach.id">
       </coach-list-item>
     </base-card>

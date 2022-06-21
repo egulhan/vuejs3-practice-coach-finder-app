@@ -10,7 +10,7 @@ export default {
                 c1: {
                     id: 'c1',
                     name: 'Erman',
-                    price: 100,
+                    rate: 100,
                     areas: [
                         'frontend',
                         'backend',
@@ -20,7 +20,7 @@ export default {
                 c2: {
                     id: 'c2',
                     name: 'Recep',
-                    price: 100,
+                    rate: 100,
                     areas: [
                         'frontend',
                         'devops',
@@ -29,7 +29,7 @@ export default {
                 c3: {
                     id: 'c3',
                     name: 'Uğur',
-                    price: 100,
+                    rate: 100,
                     areas: [
                         'backend',
                         'devops'
@@ -38,7 +38,7 @@ export default {
                 c4: {
                     id: 'c4',
                     name: 'Ali',
-                    price: 50,
+                    rate: 50,
                     areas: [
                         'frontend',
                     ],
@@ -46,7 +46,7 @@ export default {
                 c5: {
                     id: 'c5',
                     name: 'Ahmet',
-                    price: 75,
+                    rate: 75,
                     areas: [
                         'backend',
                     ],

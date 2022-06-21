@@ -2,7 +2,7 @@
   <div id="coach-details-page" class="page">
     <base-card>
       <h3>{{ coach.name }}</h3>
-      <h4>${{ coach.price }}/hour</h4>
+      <h4>${{ coach.rate }}/hour</h4>
     </base-card>
 
     <router-view></router-view>

@@ -1,5 +1,5 @@
 export default {
-    // context, payload
-    register() {
+    register(context, payload) {
+        context.commit('register', payload);
     }
 };
