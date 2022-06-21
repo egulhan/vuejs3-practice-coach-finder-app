@@ -2,60 +2,30 @@
   <div id="contact-coach-page" class="page">
     <base-card class="form-container">
       <h3>Interested? Reach out now!</h3>
-
-      <form @submit.prevent="sendMessage">
-        <div class="input-group">
-          <label for="email">Email</label>
-          <input type="text" v-model="email">
-        </div>
-        <div class="input-group">
-          <label for="message">Message</label>
-          <textarea v-model="message"></textarea>
-        </div>
-        <div class="d-flex jc-center">
-          <button type="submit" class="purple-d">Send Message</button>
-        </div>
-      </form>
+      <contact-form @submit-form="sendMessage"></contact-form>
     </base-card>
   </div>
 </template>
 
 <script>
+import ContactForm from "@/components/coach/ContactForm";
+
 export default {
   name: "ContactCoach",
-  data() {
-    return {
-      coach: null,
-      email: null,
-      message: null,
-      labelClasses: [
-        'purple-d',
-        'purple',
-        'purple-l',
-      ],
-    };
-  },
+  components: {ContactForm},
   methods: {
     getCoach(route) {
       const id = route.params.id;
       this.coach = this.$store.getters['coach/coach'](id);
     },
-    sendMessage() {
-      if (this.email.trim().length > 0 && this.message.trim().length > 0) {
-        const payload = {
-          id: this.$route.params.id,
-          email: this.email,
-          message: this.message,
-        };
+    sendMessage(formData) {
+      this.$store.dispatch('request/addRequest', formData);
 
-        this.$store.dispatch('request/addRequest', payload);
+      this.email = null;
+      this.message = null;
 
-        this.email = null;
-        this.message = null;
-
-        this.$router.push({name: 'home'});
-      }
-    }
+      this.$router.replace({name: 'home'});
+    },
   },
   created() {
     this.getCoach(this.$route);

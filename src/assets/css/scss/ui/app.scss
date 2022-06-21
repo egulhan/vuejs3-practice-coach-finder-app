@@ -71,6 +71,21 @@ button {
     margin-top: 1rem;
   }
 
+  &.invalid {
+    input, textarea {
+      border:1px solid red;
+    }
+
+    label {
+      /*color: red;*/
+    }
+
+    .error-message {
+      font-size: 0.9rem;
+      color: red;
+    }
+  }
+
   label {
     display: block;
   }
