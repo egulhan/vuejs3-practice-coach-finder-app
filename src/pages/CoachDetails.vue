@@ -10,18 +10,15 @@
     <base-card>
       <coach-areas :areas="coach.areas"></coach-areas>
     </base-card>
-
-    <request-list :id="$route.params.id"></request-list>
   </div>
 </template>
 
 <script>
-import RequestList from "@/pages/RequestList";
 import CoachAreas from "@/components/coach/CoachAreas";
 
 export default {
   name: "CoachDetails",
-  components: {CoachAreas, RequestList},
+  components: {CoachAreas},
   data() {
     return {
       coach: null,

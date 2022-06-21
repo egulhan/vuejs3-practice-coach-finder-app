@@ -20,11 +20,10 @@ import RequestItem from "@/components/request/RequestItem";
 
 export default {
   components: {RequestItem},
-  props: ['id'],
   computed: {
     requests() {
-      const id = this?.id ?? null;
-      return this.$store.getters['request/requests'](id);
+      const authUserId = this.$store.getters['authUserId'];
+      return this.$store.getters['request/requests'](authUserId);
     },
   },
 }

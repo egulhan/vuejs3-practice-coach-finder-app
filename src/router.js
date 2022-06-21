@@ -17,7 +17,7 @@ const routes = [
             {path: 'contact', name: 'contact', component: ContactCoach},
         ]
     },
-    {path: '/requests', name: 'requests', component: RequestList},
+    {path: '/requests', name: 'requests', component: RequestList, meta: {requiresLogin: true}},
     {path: '/register', name: 'register', component: CoachRegistration},
     {path: '/:pathMatch(.*)*', name: 'not-found', component: NotFound},
 ];
@@ -25,6 +25,18 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(),
     routes,
+});
+
+router.beforeEach((to, from, next) => {
+    if (to.matched.some(item => item.meta.requiresLogin)) {
+        const isAuthenticated = router.app.$store.getters['isAuthenticated'];
+
+        if (!isAuthenticated) {
+            return next({name: 'not-found'});
+        }
+    }
+
+    next();
 });
 
 export default router;
