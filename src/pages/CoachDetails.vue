@@ -18,11 +18,10 @@
 <script>
 import RequestList from "@/pages/RequestList";
 import CoachAreas from "@/components/coach/CoachAreas";
-import BaseCard from "@/components/ui/BaseCard";
 
 export default {
   name: "CoachDetails",
-  components: {BaseCard, CoachAreas, RequestList},
+  components: {CoachAreas, RequestList},
   data() {
     return {
       coach: null,

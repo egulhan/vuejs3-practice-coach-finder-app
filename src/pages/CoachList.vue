@@ -41,10 +41,9 @@
 <script>
 import CoachListItem from "@/components/coach/CoachListItem";
 import TheLoading from "@/components/ui/TheLoading";
-import BaseCard from "@/components/ui/BaseCard";
 
 export default {
-  components: {BaseCard, CoachListItem, TheLoading},
+  components: {CoachListItem, TheLoading},
   data() {
     return {
       loading: false,

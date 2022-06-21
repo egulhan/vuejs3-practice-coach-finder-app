@@ -21,11 +21,8 @@
 </template>
 
 <script>
-import BaseCard from "@/components/ui/BaseCard";
-
 export default {
   name: "ContactCoach",
-  components: {BaseCard},
   data() {
     return {
       coach: null,

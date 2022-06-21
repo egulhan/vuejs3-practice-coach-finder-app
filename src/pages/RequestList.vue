@@ -17,10 +17,9 @@
 
 <script>
 import RequestItem from "@/components/request/RequestItem";
-import BaseCard from "@/components/ui/BaseCard";
 
 export default {
-  components: {BaseCard, RequestItem},
+  components: {RequestItem},
   props: ['id'],
   computed: {
     requests() {
