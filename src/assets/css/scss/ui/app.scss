@@ -8,7 +8,6 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /*color: #2c3e50;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +17,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /*flex-flow: row wrap;*/
   min-width: 40rem;
   margin: 0 auto;
 }
@@ -122,4 +120,29 @@ button {
   .title {
     text-align: center;
   }
+}
+
+/* route animation */
+.route-enter-from {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+.route-enter-active {
+  transition: all 0.3s ease-out;
+}
+.route-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.route-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+.route-leave-active {
+  transition: all 0.3s ease-in;
+}
+.route-leave-to {
+  opacity: 0;
+  transform: translateY(-50px);
 }
