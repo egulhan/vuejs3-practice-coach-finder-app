@@ -43,4 +43,12 @@ export default {
 
         return jsonResponse;
     },
+    logout(context) {
+        context.commit('logout');
+
+        localStorage.removeItem('userId');
+        localStorage.removeItem('email');
+        localStorage.removeItem('token');
+        localStorage.removeItem('expiresIn');
+    }
 }

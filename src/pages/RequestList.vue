@@ -17,12 +17,15 @@
 
 <script>
 import RequestItem from "@/components/request/RequestItem";
+import {mapGetters} from 'vuex';
 
 export default {
   components: {RequestItem},
   computed: {
+    ...mapGetters(['hasLoggedIn', 'authUser']),
     requests() {
-      const authUserId = this.$store.getters['authUserId'];
+      const authUserId = this.hasLoggedIn ? this.authUser.userId : null;
+
       return this.$store.getters['request/requests'](authUserId);
     },
   },

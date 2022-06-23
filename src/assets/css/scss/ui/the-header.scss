@@ -10,24 +10,30 @@ header {
     text-decoration: none;
   }
 
-  ul {
-    list-style-type: none;
+  .actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    li {
-      display: inline;
+    ul {
+      list-style-type: none;
 
-      :last-child {
-        margin-left: 0.5rem;
-      }
+      li {
+        display: inline;
 
-      a:not(.home) {
-        color: pink;
-        padding: 0.5rem 0.8rem;
-        text-decoration: none;
-        font-size: 1.1rem;
+        :last-child {
+          margin-left: 0.5rem;
+        }
 
-        &.router-link-active:not(.home) {
-          border: 1px solid pink;
+        a:not(.home) {
+          color: pink;
+          padding: 0.5rem 0.8rem;
+          text-decoration: none;
+          font-size: 1.1rem;
+
+          &.router-link-active:not(.home) {
+            border: 1px solid pink;
+          }
         }
       }
     }

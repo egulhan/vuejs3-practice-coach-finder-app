@@ -12,12 +12,6 @@ const store = createStore({
         request: requestModule,
         auth: authModule,
     },
-    state() {
-        return {
-            // determine if a user is authenticated or not
-            authUserId: null,
-        };
-    },
     mutations,
     actions,
     getters,

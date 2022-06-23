@@ -65,7 +65,7 @@ export default {
   },
   computed: {
     showRegisterButton() {
-      return this.$store.getters['authUserId'] === null;
+      return this.$store.getters['hasLoggedIn'];
     }
   },
   methods: {
