@@ -6,6 +6,7 @@ import NotFound from "@/pages/NotFound";
 import {createRouter, createWebHistory} from "vue-router";
 import CoachRegistration from "@/pages/CoachRegistration";
 import TheAuth from "@/pages/TheAuth";
+import store from "@/store";
 
 const routes = [
     {path: '/', name: 'home', redirect: '/coaches'},
@@ -30,8 +31,8 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-    if (to.matched.some(item => item.meta.requiresLogin)) {
-        const isAuthenticated = router.app.$store.getters['isAuthenticated'];
+    if (to.meta.requiresLogin) {
+        const isAuthenticated = store.getters['isAuthenticated'];
 
         if (!isAuthenticated) {
             return next({name: 'auth'});

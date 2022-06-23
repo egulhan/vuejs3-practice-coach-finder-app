@@ -11,9 +11,6 @@ const app = createApp(App);
 app.use(router);
 app.use(store);
 
-router.app = app;
-router.app.$store = store;
-
 app.component('base-badge', BaseBadge);
 app.component('base-card', BaseCard);
 app.component('base-page', BasePage);
