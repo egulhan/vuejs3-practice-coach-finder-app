@@ -18,5 +18,8 @@ export default {
   components: {
     TheHeader,
   },
+  created() {
+    this.$store.dispatch('tryAutoLogin');
+  }
 }
 </script>

@@ -50,5 +50,24 @@ export default {
         localStorage.removeItem('email');
         localStorage.removeItem('token');
         localStorage.removeItem('expiresIn');
+    },
+    tryAutoLogin(context) {
+        const userId = localStorage.getItem('userId');
+        const email = localStorage.getItem('email');
+        const token = localStorage.getItem('token');
+        const expiresIn = localStorage.getItem('expiresIn');
+
+        if (!userId) {
+            return;
+        }
+
+        const authUserData = {
+            userId,
+            email,
+            token,
+            expiresIn,
+        };
+
+        context.commit('setAuthUser', authUserData);
     }
 }
