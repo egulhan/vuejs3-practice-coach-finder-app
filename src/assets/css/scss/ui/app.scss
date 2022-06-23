@@ -122,6 +122,18 @@ button {
   }
 }
 
+form {
+  .action-buttons {
+    display: flex;
+    justify-content: end;
+    margin-top: 1rem;
+
+    button {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
 /* route animation */
 .route-enter-from {
   opacity: 0;
