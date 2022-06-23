@@ -10,7 +10,7 @@
             :message="request.message">
         </request-item>
       </div>
-      <p v-else class="no-requests">The coach does not have any request.</p>
+      <p v-else class="no-requests">You don't have any request.</p>
     </base-card>
   </div>
 </template>

@@ -31,12 +31,12 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-    if (to.meta.requiresLogin) {
-        const isAuthenticated = store.getters['isAuthenticated'];
+    const isAuthenticated = store.getters['hasLoggedIn'];
 
-        if (!isAuthenticated) {
-            return next({name: 'auth'});
-        }
+    if (!isAuthenticated && !!to.meta.requiresLogin) {
+        return next({name: 'auth'});
+    } else if (isAuthenticated && to.name === 'auth') {
+        return router.replace({name: 'coaches'});
     }
 
     next();
